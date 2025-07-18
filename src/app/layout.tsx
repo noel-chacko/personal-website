@@ -30,7 +30,11 @@ export const metadata: Metadata = {
     description: "Personal website of Noel Chacko, an aspiring software engineer, photographer, and adventurer.",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
   },
 };
 

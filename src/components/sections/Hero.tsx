@@ -3,13 +3,13 @@
 import { motion } from 'framer-motion';
 import { ChevronDown, ArrowRight, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
 
 const Hero = () => {
-  const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const router = useRouter();
+
+  const goToProjects = () => {
+    router.push('/projects');
   };
 
   return (
@@ -103,7 +103,7 @@ const Hero = () => {
             className="pt-8"
           >
             <Button
-              onClick={scrollToProjects}
+              onClick={goToProjects}
               size="lg"
               className="glow-on-hover text-lg px-8 py-6 h-auto"
             >
